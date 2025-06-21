@@ -1,0 +1,11 @@
+[project]
+name = "gree-exporter"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "environs>=14.2.0",
+    "greeclimate>=2.1.0",
+    "prometheus-async[aiohttp]>=25.1.0",
+    "prometheus-client>=0.22.1",
+]
