@@ -9,3 +9,20 @@ dependencies = [
     "prometheus-async[aiohttp]>=25.1.0",
     "prometheus-client>=0.22.1",
 ]
+
+[dependency-groups]
+lint = [
+    "mypy>=1.16.1",
+]
+
+[[tool.mypy.overrides]]
+module = [
+    "gree_exporter.*",
+]
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    "greeclimate.*",
+]
+ignore_missing_imports = true

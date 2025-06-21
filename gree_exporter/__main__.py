@@ -5,7 +5,7 @@ from environs import env
 from .exporter import GreeExporter
 
 
-async def main():
+async def main() -> None:
     port = env.int("GREE_EXPORTER_PORT", None)
     discovery_interval = env.int("GREE_EXPORTER_DISCOVERY_INTERVAL", None)
     update_interval = env.int("GREE_EXPORTER_UPDATE_INTERVAL", None)
