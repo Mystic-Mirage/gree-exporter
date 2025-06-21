@@ -6,10 +6,10 @@ from .exporter import GreeExporter
 
 
 async def main():
-    port = env.int("PORT", None)
-    discovery_interval = env.int("DISCOVERY_INTERVAL", None)
-    update_interval = env.int("UPDATE_INTERVAL", None)
-    wait_time = env.int("WAIT_INTERVAL", None)
+    port = env.int("GREE_EXPORTER_PORT", None)
+    discovery_interval = env.int("GREE_EXPORTER_DISCOVERY_INTERVAL", None)
+    update_interval = env.int("GREE_EXPORTER_UPDATE_INTERVAL", None)
+    wait_time = env.int("GREE_EXPORTER_WAIT_INTERVAL", None)
 
     exporter = GreeExporter(port, discovery_interval, update_interval, wait_time)
     await exporter.start()
